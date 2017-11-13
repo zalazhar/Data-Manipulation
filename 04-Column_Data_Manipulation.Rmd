@@ -1,0 +1,63 @@
+# Column Formulas
+
+After obtaining a good overview of the data, we can move to manipulating data. In this chapter we present the most used data manipulaton formulas on one ore more columns. 
+
+
+## Data Binning
+ Data Binning is about grouping data in intervals - called bins.  For example, in the titanic dataset we've measured the age in years, but you wanted to have age categories as follows:
+
+- 1 = Child , age ranges of 0-17
+- 2 = Adult,  age ranges of 18-39
+- 3 = Middle Aged,  age ranges of 40-59
+- 4 = Over 60, age ranges of 60 and above
+
+**R**
+```{r}
+titanic = read.csv("titanic.csv")
+#define the left  edges of the age categories and the corresponding labels:
+edges <- c(0,18,40,60, 120)
+labels <- c("Child","Adult","Middle Aged","Over 60")
+# we can break the ages in categories with the cut function
+age.categories <- cut(titanic$Age,breaks = edges, right = FALSE, labels = labels)
+# print the first 50 age items and the corresponding age categories)
+age.categories[1:50]
+```
+
+**PYTHON**
+```{python}
+import pandas as pd
+titanic = pd.read_csv("titanic.csv")
+labels = ["Child","Adult","Middle Aged", "Over 60"]
+edges = [0,18,40,60, 120]
+age_categories =  pd.cut(titanic["Age"], edges, labels=labels)
+print age_categories[0:20]
+```
+
+
+## Convert & Replace
+Convert & Replace is a set of formulas that deal with converting and replacing columns or individual cells.
+
+### Category to Number
+Category To Number is about converting nominal data to integer. Very often, prediction or machine learning functions don't accept nominal data, making it necessary to convert these columns to integer. For instance, the column 'Sex' in the titanic dataset is nominal consisting of "male" and "female", which  can be encoded to the integers 0/1, as follows:
+
+**R**
+```{r}
+titanic = read.csv("titanic.csv")
+gender.encoded <- as.integer(as.factor(titanic$Sex))-1
+#print subset
+head(gender.encoded)
+```
+
+**Python**
+
+```{python}
+import pandas as pd
+titanic = pd.read_csv("titanic.csv")
+gender_encoded =   pd.Categorical(titanic.Sex).codes 
+# print subset
+print gender_encoded[0:6]
+```
+
+
+
+

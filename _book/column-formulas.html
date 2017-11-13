@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>THE ULTIMATE GUIDE TO DATA MANIPULATION WITH R AND PYTHON</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="THE ULTIMATE GUIDE TO DATA MANIPULATION WITH R AND PYTHON" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="THE ULTIMATE GUIDE TO DATA MANIPULATION WITH R AND PYTHON" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Zakaria Al Azhar, bigdatahabits.com">
+
+
+<meta name="date" content="2017-11-12">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="data-exploration.html">
+<link rel="next" href="final-words-and-this-is-strange.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Klm</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="prerequisites.html"><a href="prerequisites.html"><i class="fa fa-check"></i><b>3</b> Prerequisites</a><ul>
+<li class="chapter" data-level="3.1" data-path="prerequisites.html"><a href="prerequisites.html#basic-knowledge"><i class="fa fa-check"></i><b>3.1</b> Basic knowledge</a></li>
+<li class="chapter" data-level="3.2" data-path="prerequisites.html"><a href="prerequisites.html#dataset"><i class="fa fa-check"></i><b>3.2</b> Dataset</a></li>
+<li class="chapter" data-level="3.3" data-path="prerequisites.html"><a href="prerequisites.html#python-and-r-packages"><i class="fa fa-check"></i><b>3.3</b> Python and R packages</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-exploration.html"><a href="data-exploration.html"><i class="fa fa-check"></i><b>4</b> Data Exploration</a><ul>
+<li class="chapter" data-level="4.1" data-path="data-exploration.html"><a href="data-exploration.html#data-structure"><i class="fa fa-check"></i><b>4.1</b> Data Structure</a></li>
+<li class="chapter" data-level="4.2" data-path="data-exploration.html"><a href="data-exploration.html#data-summary"><i class="fa fa-check"></i><b>4.2</b> Data Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="column-formulas.html"><a href="column-formulas.html"><i class="fa fa-check"></i><b>5</b> Column Formulas</a><ul>
+<li class="chapter" data-level="5.1" data-path="column-formulas.html"><a href="column-formulas.html#data-binning"><i class="fa fa-check"></i><b>5.1</b> Data Binning</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words-and-this-is-strange.html"><a href="final-words-and-this-is-strange.html"><i class="fa fa-check"></i><b>6</b> Final Words and this is strange</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">THE ULTIMATE GUIDE TO DATA MANIPULATION WITH R AND PYTHON</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="column-formulas" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Column Formulas</h1>
+<p>After obtaining a good overview of the data, we can move to the next step: manipulating data. In this chapter we present the most used data manipulaton formulas on one ore more columns.</p>
+<div id="data-binning" class="section level2">
+<h2><span class="header-section-number">5.1</span> Data Binning</h2>
+<p>Data Binning is about grouping data in intervals - called bins. For example, in the titanic dataset we’ve measured the age in years, but you wanted to have age categories as follows:</p>
+<ul>
+<li>1 = Child , age ranges of 0-17</li>
+<li>2 = Adult, age ranges of 18-39</li>
+<li>3 = Middle Aged, age ranges of 40-59</li>
+<li>4 = Over 60, age ranges of 60 and above</li>
+</ul>
+<p><strong>R</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">titanic =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;titanic.csv&quot;</span>)
+<span class="co">#define the left  edges of the age categories and the corresponding labels:</span>
+edges &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">18</span>,<span class="dv">40</span>,<span class="dv">60</span>, <span class="dv">120</span>)
+labels &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Child&quot;</span>,<span class="st">&quot;Adult&quot;</span>,<span class="st">&quot;Middle Aged&quot;</span>,<span class="st">&quot;Over 60&quot;</span>)
+<span class="co"># we can break the ages in categories with the cut function</span>
+age.categories &lt;-<span class="st"> </span><span class="kw">cut</span>(titanic<span class="op">$</span>Age,<span class="dt">breaks =</span> edges, <span class="dt">right =</span> <span class="ot">FALSE</span>, <span class="dt">labels =</span> labels)
+<span class="co"># print the first 50 age items and the corresponding age categories)</span>
+age.categories[<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>]</code></pre></div>
+<pre><code>##  [1] Adult       Adult       Adult       Adult       Adult      
+##  [6] &lt;NA&gt;        Middle Aged Child       Adult       Child      
+## [11] Child       Middle Aged Adult       Adult       Child      
+## [16] Middle Aged Child       &lt;NA&gt;        Adult       &lt;NA&gt;       
+## [21] Adult       Adult       Child       Adult       Child      
+## [26] Adult       &lt;NA&gt;        Adult       &lt;NA&gt;        &lt;NA&gt;       
+## [31] Middle Aged &lt;NA&gt;        &lt;NA&gt;        Over 60     Adult      
+## [36] Middle Aged &lt;NA&gt;        Adult       Adult       Child      
+## [41] Middle Aged Adult       &lt;NA&gt;        Child       Adult      
+## [46] &lt;NA&gt;        &lt;NA&gt;        &lt;NA&gt;        &lt;NA&gt;        Adult      
+## Levels: Child Adult Middle Aged Over 60</code></pre>
+<p><strong>PYTHON</strong></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> pandas <span class="im">as</span> pd
+titanic <span class="op">=</span> pd.read_csv(<span class="st">&quot;titanic.csv&quot;</span>)
+labels <span class="op">=</span> [<span class="st">&quot;Child&quot;</span>,<span class="st">&quot;Adult&quot;</span>,<span class="st">&quot;Middle Aged&quot;</span>, <span class="st">&quot;Over 60&quot;</span>]
+edges <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">18</span>,<span class="dv">40</span>,<span class="dv">60</span>, <span class="dv">120</span>]
+age_categories <span class="op">=</span>  pd.cut(titanic[<span class="st">&quot;Age&quot;</span>], edges, labels<span class="op">=</span>labels)
+<span class="bu">print</span> age_categories</code></pre></div>
+<pre><code>## 0            Adult
+## 1            Adult
+## 2            Adult
+## 3            Adult
+## 4            Adult
+## 5              NaN
+## 6      Middle Aged
+## 7            Child
+## 8            Adult
+## 9            Child
+## 10           Child
+## 11     Middle Aged
+## 12           Adult
+## 13           Adult
+## 14           Child
+## 15     Middle Aged
+## 16           Child
+## 17             NaN
+## 18           Adult
+## 19             NaN
+## 20           Adult
+## 21           Adult
+## 22           Child
+## 23           Adult
+## 24           Child
+## 25           Adult
+## 26             NaN
+## 27           Adult
+## 28             NaN
+## 29             NaN
+##           ...     
+## 861          Adult
+## 862    Middle Aged
+## 863            NaN
+## 864          Adult
+## 865    Middle Aged
+## 866          Adult
+## 867          Adult
+## 868            NaN
+## 869          Child
+## 870          Adult
+## 871    Middle Aged
+## 872          Adult
+## 873    Middle Aged
+## 874          Adult
+## 875          Child
+## 876          Adult
+## 877          Adult
+## 878            NaN
+## 879    Middle Aged
+## 880          Adult
+## 881          Adult
+## 882          Adult
+## 883          Adult
+## 884          Adult
+## 885          Adult
+## 886          Adult
+## 887          Adult
+## 888            NaN
+## 889          Adult
+## 890          Adult
+## Name: Age, Length: 891, dtype: category
+## Categories (4, object): [Child &lt; Adult &lt; Middle Aged &lt; Over 60]</code></pre>
+<p><strong>Python Output</strong></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-exploration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="final-words-and-this-is-strange.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

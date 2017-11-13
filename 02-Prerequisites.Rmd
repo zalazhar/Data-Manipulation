@@ -1,0 +1,14 @@
+# Prerequisites
+
+## Basic knowledge
+We assume basic knowledge of Python or R: knowing how to ecexute code in your favourite IDE. 
+
+## Dataset
+We use the Titanic Dataset to implement the data manipulation formulas. The dataset can be downloaded as a csv file from Kaggle: 
+
+## Python and R packages
+
+**R:**  I've delibarately  chosen to implement the formulas in base R, and not depend on additional R packages, such as dplyr. The main reason is that understanding base first, makes switching to other packages much easier. The other way around doesn't always hold.
+
+
+**Python:** The Python implemantations of the formulas are done using the library pandas. For more instructions on installing pandas on yoor computer, see [(https://pandas.pydata.org/pandas-docs/stable/install.html)]

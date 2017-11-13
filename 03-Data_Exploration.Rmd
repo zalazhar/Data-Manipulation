@@ -1,0 +1,44 @@
+# Data Exploration
+
+Before starting with data manipulation or anything else, we begin with exploring the dataset.
+
+## Data Structure
+
+Let's have a look at the data structure of the Titanic dataset:
+
+**R**
+```{r}
+# read the dataset
+titanic <- read.csv("titanic.csv", stringsAsFactors = FALSE)
+# give us the data stucture
+str(titanic)
+```
+
+The output gives us a good overview of the columns and its data structure,  plus some preview of data. We can derive that the number of numeric columns is almost equal to the number of the character columns
+
+**Python**
+```{python}
+import pandas as pd
+# read the data set
+titanic = pd.read_csv("titanic.csv")
+# print the data structure
+print titanic.dtypes
+```
+
+The Python ouptut is briefer than the R variant. Nevertheless, it gives a nice overview of the underlying structure. Interesting to note is that Python labels some columns as "object", while in R the same columns have been labeled as character. The reason is that these columns contain different data types, causing Pandas to label it as "object".
+
+## Data Summary
+
+To get a bird eye view of the data, we can make a summary:
+
+```{r}
+summary(titanic)
+```
+```{python}
+import pandas as pd
+titanic = pd.read_csv("titanic.csv")
+print titanic.describe()
+```
+
+
+
