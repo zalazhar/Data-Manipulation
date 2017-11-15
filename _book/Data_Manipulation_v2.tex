@@ -31,46 +31,6 @@
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apalike}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -124,24 +84,10 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-11-12}
+  \date{2017-11-13}
 
 \usepackage{booktabs}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -152,6 +98,56 @@
 \chapter{Klm}\label{klm}
 
 \chapter{Introduction}\label{intro}
+
+Before you can really mine your data for insights you need to clean it
+up. Even though it's always good practice to create a clean,
+well-structured data set, sometimes it's not always possible. Data sets
+can come in all shapes and sizes (some good, some not so good!),
+especially when you're getting it from the web.
+
+Data manipulation refers to a set of skills of changing data in an
+effort to make it easier to read or be more organized, with the eventual
+goal to get and present insight.
+
+In this book we cover the most used data manipulation formulas, and show
+how to implement the formulas with R and Python. The formulas are
+classified in the following sections:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Column formulas}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{\emph{Binning}}: grouping data in intervals
+  \item
+    \textbf{\emph{Convert and Replace}}: casting datatypes, converting,
+    replacing and column renaming.
+  \item
+    \textbf{\emph{Filter}}: Inclusion, Exclusion, Selecting, and
+    Searching.
+  \item
+    \textbf{\emph{Split and Combine}}: Splitting, Aggregating,
+    Combining, Merging, Joining, and Appending
+  \item
+    \textbf{\emph{Transform}}: Converting, Comparing, Resorting,
+    Lagging, Missing Value, Normalizing/Denormalizing, One To Many, Many
+    to One, String manipulation, Subsetting.
+  \end{itemize}
+\item
+  \textbf{Row formulas}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{\emph{Filter}}: Row filter, and Data Splitting
+  \item
+    \textbf{\emph{Transform}}: Concatenate, Group by, Ungroup,
+    Partitioning, Pivoting, Unpivioting, Sampling, and Sorting.
+  \end{itemize}
+\end{itemize}
 
 \chapter{Prerequisites}\label{prerequisites}
 
@@ -169,139 +165,11 @@
 
 \chapter{Column Formulas}\label{column-formulas}
 
-After obtaining a good overview of the data, we can move to the next
-step: manipulating data. In this chapter we present the most used data
-manipulaton formulas on one ore more columns.
-
 \section{Data Binning}\label{data-binning}
-
-Data Binning is about grouping data in intervals - called bins. For
-example, in the titanic dataset we've measured the age in years, but you
-wanted to have age categories as follows:
-
-\begin{itemize}
-\tightlist
-\item
-  1 = Child , age ranges of 0-17
-\item
-  2 = Adult, age ranges of 18-39
-\item
-  3 = Middle Aged, age ranges of 40-59
-\item
-  4 = Over 60, age ranges of 60 and above
-\end{itemize}
-
-\textbf{R}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{titanic =}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"titanic.csv"}\NormalTok{)}
-\CommentTok{#define the left  edges of the age categories and the corresponding labels:}
-\NormalTok{edges <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{18}\NormalTok{,}\DecValTok{40}\NormalTok{,}\DecValTok{60}\NormalTok{, }\DecValTok{120}\NormalTok{)}
-\NormalTok{labels <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Child"}\NormalTok{,}\StringTok{"Adult"}\NormalTok{,}\StringTok{"Middle Aged"}\NormalTok{,}\StringTok{"Over 60"}\NormalTok{)}
-\CommentTok{# we can break the ages in categories with the cut function}
-\NormalTok{age.categories <-}\StringTok{ }\KeywordTok{cut}\NormalTok{(titanic}\OperatorTok{$}\NormalTok{Age,}\DataTypeTok{breaks =}\NormalTok{ edges, }\DataTypeTok{right =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{labels =}\NormalTok{ labels)}
-\CommentTok{# print the first 50 age items and the corresponding age categories)}
-\NormalTok{age.categories[}\DecValTok{1}\OperatorTok{:}\DecValTok{50}\NormalTok{]}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##  [1] Adult       Adult       Adult       Adult       Adult      
-##  [6] <NA>        Middle Aged Child       Adult       Child      
-## [11] Child       Middle Aged Adult       Adult       Child      
-## [16] Middle Aged Child       <NA>        Adult       <NA>       
-## [21] Adult       Adult       Child       Adult       Child      
-## [26] Adult       <NA>        Adult       <NA>        <NA>       
-## [31] Middle Aged <NA>        <NA>        Over 60     Adult      
-## [36] Middle Aged <NA>        Adult       Adult       Child      
-## [41] Middle Aged Adult       <NA>        Child       Adult      
-## [46] <NA>        <NA>        <NA>        <NA>        Adult      
-## Levels: Child Adult Middle Aged Over 60
-\end{verbatim}
-
-\textbf{PYTHON}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
-\NormalTok{titanic }\OperatorTok{=}\NormalTok{ pd.read_csv(}\StringTok{"titanic.csv"}\NormalTok{)}
-\NormalTok{labels }\OperatorTok{=}\NormalTok{ [}\StringTok{"Child"}\NormalTok{,}\StringTok{"Adult"}\NormalTok{,}\StringTok{"Middle Aged"}\NormalTok{, }\StringTok{"Over 60"}\NormalTok{]}
-\NormalTok{edges }\OperatorTok{=}\NormalTok{ [}\DecValTok{0}\NormalTok{,}\DecValTok{18}\NormalTok{,}\DecValTok{40}\NormalTok{,}\DecValTok{60}\NormalTok{, }\DecValTok{120}\NormalTok{]}
-\NormalTok{age_categories }\OperatorTok{=}\NormalTok{  pd.cut(titanic[}\StringTok{"Age"}\NormalTok{], edges, labels}\OperatorTok{=}\NormalTok{labels)}
-\BuiltInTok{print}\NormalTok{ age_categories[}\DecValTok{0}\NormalTok{:}\DecValTok{20}\NormalTok{]}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 0           Adult
-## 1           Adult
-## 2           Adult
-## 3           Adult
-## 4           Adult
-## 5             NaN
-## 6     Middle Aged
-## 7           Child
-## 8           Adult
-## 9           Child
-## 10          Child
-## 11    Middle Aged
-## 12          Adult
-## 13          Adult
-## 14          Child
-## 15    Middle Aged
-## 16          Child
-## 17            NaN
-## 18          Adult
-## 19            NaN
-## Name: Age, dtype: category
-## Categories (4, object): [Child < Adult < Middle Aged < Over 60]
-\end{verbatim}
 
 \section{Convert \& Replace}\label{convert-replace}
 
-Convert \& Replace is a set of formulas that deal with converting and
-replacing columns or individual cells.
-
 \subsection{Category to Number}\label{category-to-number}
-
-Category To Number is about converting nominal data to integer. Very
-often, prediction or machine learning functions don't accept nominal
-data, making it necessary to convert the field to integer if you want to
-make predictions. For instance, the column `Sex' in the titanic dataset
-is nominal consisting of ``male'' and ``female'', which can be encoded
-to the integers 0/1, as follows:
-
-\textbf{R}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{titanic =}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"titanic.csv"}\NormalTok{)}
-\CommentTok{#define the left  edges of the age categories and the corresponding labels:}
-\NormalTok{gender.encoded <-}\StringTok{ }\KeywordTok{as.integer}\NormalTok{(}\KeywordTok{as.factor}\NormalTok{(titanic}\OperatorTok{$}\NormalTok{Sex))}\OperatorTok{-}\DecValTok{1}
-\CommentTok{#print subset}
-\KeywordTok{head}\NormalTok{(gender.encoded)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 1 0 0 0 1 1
-\end{verbatim}
-
-\textbf{Python}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
-\NormalTok{titanic }\OperatorTok{=}\NormalTok{ pd.read_csv(}\StringTok{"titanic.csv"}\NormalTok{)}
-\NormalTok{gender_encoded }\OperatorTok{=}\NormalTok{   pd.Categorical(titanic.Sex).codes }
-\BuiltInTok{print}\NormalTok{ gender_encoded[}\DecValTok{0}\NormalTok{:}\DecValTok{6}\NormalTok{]}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1 0 0 0 1 1]
-\end{verbatim}
 
 \chapter{Final Words and this is
 strange}\label{final-words-and-this-is-strange}

@@ -1,16 +1,16 @@
 # Introduction {#intro}
-Before you can really mine your data for insights you need to clean it up. Even though it’s always good practice to create a clean, well-structured data set, sometimes it’s not always possible. Data sets can come in all shapes and sizes (some good, some not so good!), especially when you’re getting it from the web. 
+Before you can really mine your data for insights you need to manipulate it. Even though it’s always good practice to create a clean, well-structured data set, sometimes it’s not always possible. Data sets can come in all shapes and sizes (some good, some not so good!), especially when you’re getting it from the web. 
 
 Data manipulation refers to a set of skills of changing data in an effort to make it easier to read or be more organized, with the eventual goal to get and present insight.
 
-In this book we cover the most used formulas of data manipulation, and show how to implement the formulas with R and Python.  The formulas are classified into the following sections: 
+In this book we cover the most used data manipulation formulas, and show how to implement the formulas with R and Python.  The formulas are classified in the following sections: 
 
 - **Column formulas**
     - **_Binning_**: grouping data in intervals
     - **_Convert and Replace_**: casting datatypes, converting, replacing  and column renaming.
-    - **_Filter_**: Inclusion, Exclusion, Selecting, and Searching.....
+    - **_Filter_**: Inclusion, Exclusion, Selecting, and Searching.
     - **_Split and Combine_**: Splitting, Aggregating, Combining, Merging, Joining, and Appending
-    - **_Transform_**: Converting, Comparing, Restorting, Lagging, Missing Value, Normalizing/Denormalizing, One To Many, Many to One, String manipulation, Subsetting.
+    - **_Transform_**: Converting, Comparing, Resorting, Lagging, Missing Value, Normalizing/Denormalizing, One To Many, Many to One, String manipulation, Subsetting.
     
 
 - **Row formulas**

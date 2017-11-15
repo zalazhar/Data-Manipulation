@@ -1,6 +1,6 @@
 # Column Formulas
 
-After obtaining a good overview of the data, we can move to manipulating data. In this chapter we present the most used data manipulaton formulas on one ore more columns. 
+After obtaining a good overview of the data, we can move to manipulating data. In this chapter we present the most used data manipulaton formulas on columns. 
 
 
 ## Data Binning
@@ -19,7 +19,7 @@ edges <- c(0,18,40,60, 120)
 labels <- c("Child","Adult","Middle Aged","Over 60")
 # we can break the ages in categories with the cut function
 age.categories <- cut(titanic$Age,breaks = edges, right = FALSE, labels = labels)
-# print the first 50 age items and the corresponding age categories)
+# print the first 50 corresponding age categories)
 age.categories[1:50]
 ```
 
@@ -36,6 +36,39 @@ print age_categories[0:20]
 
 ## Convert & Replace
 Convert & Replace is a set of formulas that deal with converting and replacing columns or individual cells.
+
+## Type Casting
+Type casting is about converting the type of data structures to another type.  Most used type casting formulas are:
+- Numeric to String
+- String to Numeric
+- Double to Int
+
+**R**
+```{r}
+titaninc <-read.csv("titanic.csv")
+# numeric to string
+age.string <- as.character(titanic$Age)
+# string to numeric 
+age.numeric <- as.numeric(age.string)
+# double to int
+fare.int  <- as.integer(titanic$Fare)
+```
+
+**Python**
+```{python}
+titaninc <-read_csv("titanic.csv")
+# numeric to string
+age.string <- as.character(titanic$Age)
+# string to numeric 
+age.numeric <- as.numeric(age.string)
+# double to int
+fare.int  <- as.integer(titanic$Fare)
+```
+
+
+
+The R implementation is as follows:
+
 
 ### Category to Number
 Category To Number is about converting nominal data to integer. Very often, prediction or machine learning functions don't accept nominal data, making it necessary to convert these columns to integer. For instance, the column 'Sex' in the titanic dataset is nominal consisting of "male" and "female", which  can be encoded to the integers 0/1, as follows:
